@@ -39,12 +39,12 @@ int main(int argc, char* argv[]) {
         std::cerr << "Error opening table file\n";
     }
 
-    std::string outputFileName = argv[1];
-    outputFileName += ".txt";
+    std::string output_file_name = argv[1];
+    output_file_name += ".txt";
 
     // Open the file as a binary stream
     std::ifstream input(argv[1], std::ios::binary);
-    std::ofstream output(outputFileName, std::ios::binary);
+    std::ofstream output(output_file_name, std::ios::binary);
 
     // Check if the file is opened successfully
     if (input.is_open() && output.is_open()) {
